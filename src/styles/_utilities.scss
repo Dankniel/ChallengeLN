@@ -1,0 +1,22 @@
+@import './variables';
+@import './mixins';
+
+.card-padding {
+  @include padding(1rem);
+}
+
+.card-background-primary {
+  @include background($primary-color);
+}
+
+.card-rounded {
+  @include rounded();
+}
+
+.text-white {
+  @include text-color(white);
+}
+
+.text-dark {
+  @include text-color($text-color);
+}

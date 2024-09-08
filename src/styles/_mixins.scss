@@ -1,0 +1,19 @@
+@mixin padding($size) {
+  padding: $size;
+}
+
+@mixin margin($size) {
+  margin: $size;
+}
+
+@mixin background($color) {
+  background-color: $color;
+}
+
+@mixin rounded($radius: 0.5rem) {
+  border-radius: $radius;
+}
+
+@mixin text-color($color) {
+  color: $color;
+}
