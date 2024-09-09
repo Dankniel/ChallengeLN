@@ -1,6 +1,7 @@
 import Divider from "../../components/divider/divider"
 import Anticipo from "./components/anticipo/anticipo"
 import NavHeader from "./components/nav_header/nav_header"
+import Placeholder from "./components/placeholder/placeholder"
 import StickyBanner from "./components/sticky_banner/sticky_banner"
 import Subheader from "./components/subheader/subheader"
 import './home.scss'
@@ -18,7 +19,7 @@ const HomeScreen = () => {
       </div>
       <Subheader />
       <Anticipo text={volantaText} />
-
+      <Placeholder />
       <div style={{ backgroundColor: 'red', height: '500px' }}>
         Footer
       </div>

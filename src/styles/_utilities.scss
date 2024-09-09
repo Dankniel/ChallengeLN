@@ -9,6 +9,12 @@
   }
 }
 
+@each $direction in $flexDirections {
+  .fd-#{$direction} {
+    flex-direction: #{$direction};
+  }
+}
+
 //POSITIONING
 @each $pos in $positions {
   .pos-#{$pos} {
