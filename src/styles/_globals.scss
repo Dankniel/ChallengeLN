@@ -1,6 +1,5 @@
 @import './variables';
-@import './mixins';
-@import './utilities';
+
 
 // Reset CSS o normalize.css
 * {
@@ -11,5 +10,5 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  color: $text-color;
+  color: $black-ln;
 }

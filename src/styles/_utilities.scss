@@ -1,22 +1,216 @@
 @import './variables';
-@import './mixins';
 
-.card-padding {
-  @include padding(1rem);
+
+
+//DISPLAY
+@each $disp in $displayProps {
+  .d-#{$disp} {
+    display: #{$disp};
+  }
 }
 
-.card-background-primary {
-  @include background($primary-color);
+//POSITIONING
+@each $pos in $positions {
+  .pos-#{$pos} {
+    position: #{$pos};
+  }
 }
 
-.card-rounded {
-  @include rounded();
+@each $positioning in $positioningTypes {
+  .pos-type-#{$positioning} {
+    #{$positioning}: 0;
+  }
 }
 
-.text-white {
-  @include text-color(white);
+//SPACING
+@each $space in $spaceAmounts {
+  @if $space==auto {
+    .m-#{$space} {
+      margin: #{$space};
+    }
+
+    .mx-#{$space} {
+      margin-left: #{$space};
+      margin-right: #{$space};
+    }
+
+    .my-#{$space} {
+      margin-top: #{$space};
+      margin-bottom: #{$space};
+
+    }
+
+    .ml-#{$space} {
+      margin-left: #{$space};
+    }
+
+    .mr-#{$space} {
+      margin-right: #{$space};
+    }
+
+    .mb-#{$space} {
+      margin-bottom: #{$space};
+    }
+
+    .mt-#{$space} {
+      margin-top: #{$space};
+    }
+  }
+
+  @else {
+    .m-#{$space} {
+      margin: #{$space}px;
+    }
+
+    .mx-#{$space} {
+      margin-left: #{$space}px;
+      margin-right: #{$space}px;
+    }
+
+    .my-#{$space} {
+      margin-top: #{$space}px;
+      margin-bottom: #{$space}px;
+
+    }
+
+    .ml-#{$space} {
+      margin-left: #{$space}px;
+    }
+
+    .mr-#{$space} {
+      margin-right: #{$space}px;
+    }
+
+    .mb-#{$space} {
+      margin-bottom: #{$space}px;
+    }
+
+    .mt-#{$space} {
+      margin-top: #{$space}px;
+    }
+
+    .p-#{$space} {
+      padding: #{$space}px;
+    }
+
+    .px-#{$space} {
+      padding-left: #{$space}px;
+      padding-right: #{$space}px;
+    }
+
+    .py-#{$space} {
+      padding-top: #{$space}px;
+      padding-bottom: #{$space}px;
+
+    }
+
+    .pl-#{$space} {
+      padding-left: #{$space}px;
+    }
+
+    .pr-#{$space} {
+      padding-right: #{$space}px;
+    }
+
+    .pb-#{$space} {
+      padding-bottom: #{$space}px;
+    }
+
+    .pt-#{$space} {
+      padding-top: #{$space}px;
+    }
+
+    .gap-#{$space} {
+      gap: #{$space}px;
+    }
+  }
 }
 
-.text-dark {
-  @include text-color($text-color);
+//ALIGN
+@each $align in $alignments {
+  .justify-#{$align} {
+    justify-content: #{$align};
+  }
+
+  .align-items-#{$align} {
+    align-items: #{$align};
+  }
+
+  .justify-items-#{$align} {
+    justify-items: #{$align};
+  }
+
+  .content-#{$align} {
+    align-content: #{$align};
+  }
+}
+
+//TEXT ALIGN
+@each $textAlign in $textAlignments {
+  .text-#{$textAlign} {
+    text-align: #{$textAlign};
+  }
+}
+
+//WIDTH
+@each $width in $widthSizes {
+  .w-#{$width} {
+    width: #{$width};
+  }
+}
+
+//HEIGHT
+@each $height in $heightSizes {
+  .h-#{$height} {
+    height: #{$height};
+  }
+}
+
+//FONT SIZES
+@each $fontSize in $fontSizes {
+  .font-s-#{$fontSize} {
+    font-size: #{$fontSize}px;
+  }
+}
+
+//FONT WEIGHT
+@each $fontWeight in $fontWeights {
+  .font-w-#{$fontWeight} {
+    font-weight: #{$fontWeight};
+  }
+}
+
+//LINE HEIGHT
+@each $lineHeight in $lineHeights {
+  .lh-#{$lineHeight} {
+    line-height: #{$lineHeight}px;
+  }
+}
+
+//BORDER
+@each $borderSize in $borderSizes {
+  .border-width-#{$borderSize} {
+    border-width: #{$borderSize}px;
+  }
+}
+
+//BORDER RADIUS
+@each $borderRadius in $radiusSizes {
+  .border-radius-#{$borderRadius} {
+    border-radius: #{$borderRadius}px;
+  }
+}
+
+@each $name, $color in $colors {
+  .text-color-#{$name} {
+    color: #{$color};
+  }
+
+  .bg-color-#{$name} {
+    background-color: #{$color};
+  }
+
+  .border-color-#{$name} {
+    border-color: #{$color};
+  }
 }

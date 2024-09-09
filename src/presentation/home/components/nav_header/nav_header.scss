@@ -1,0 +1,51 @@
+@import '../../../../styles/mixins';
+
+.nav-header-sm-search-container {
+  display: flex;
+}
+
+.nav-header-container {
+  padding: 12px 16px;
+}
+
+.nav-logo {
+  width: 164px;
+  height: 16px;
+}
+
+.search-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.nav-header-subscribe-button,
+.nav-header-right-section,
+.nav-header-left-section {
+  display: none;
+}
+
+@include respond-to(desktop)  {
+  .nav-header-container {
+    padding: 16px 53px;
+  }
+
+  .nav-logo  {
+    width: 300px;
+    height: 30px;
+  }
+
+  .nav-header-right-section,
+  .nav-header-left-section {
+    display: flex;
+  }
+
+  .nav-header-sm-search-container {
+    display: none;
+  }
+}
+
+@include respond-to(fullscreen) {
+  .nav-header-container {
+    padding: 16px 330px;
+  }
+}

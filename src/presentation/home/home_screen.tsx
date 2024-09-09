@@ -1,8 +1,39 @@
+import Opening from "./components/opening/opening"
+import StickyBanner from "./components/sticky_banner/sticky_banner"
+
 const HomeScreen = () => {
 
   return (
     <div>
-      <h1>Home</h1>
+      <StickyBanner />
+      <Opening />
+      <div>
+        Body
+      </div>
+      <div>
+        Footer
+      </div>
+      <div>
+        Footer
+      </div>
+      <div>
+        Footer
+      </div>
+      <div>
+        Footer
+      </div>
+      <div>
+        Footer
+      </div>
+      <div>
+        Footer
+      </div>
+      <div>
+        Footer
+      </div>
+      <div style={{ backgroundColor: 'red', height: '800px' }}>
+        Footer
+      </div>
     </div>
   )
 }
