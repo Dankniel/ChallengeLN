@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom"
-import HomeScreen from "../../../../presentation/home/home_screen"
-import Cat from "../../../../presentation/error/cat"
-import ErrorScreen from "../../../../presentation/error/error_screen"
+import HomeScreen from "../../../../presentation/screens/home/home_screen"
+import Cat from "../../../../presentation/screens/error/cat"
+import ErrorScreen from "../../../../presentation/screens/error/error_screen"
 
 const MainLayout = () => {
   return (

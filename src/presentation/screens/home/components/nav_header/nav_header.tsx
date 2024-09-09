@@ -1,9 +1,9 @@
-import logo from '../../../../assets/images/logo-ln.svg'
-import searchIcon from '../../../../assets/icons/search_icon.svg'
-import listIcon from '../../../../assets/icons/list_icon.svg'
+import logo from '../../../../../assets/images/logo-ln.svg'
+import searchIcon from '../../../../../assets/icons/search_icon.svg'
+import listIcon from '../../../../../assets/icons/list_icon.svg'
 
 import './nav_header.scss'
-import Button from '../../../components/button/button'
+import Button from '../../../../components/button/button'
 
 const NavHeader = () => {
 

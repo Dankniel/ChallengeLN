@@ -1,4 +1,4 @@
-import Divider from "../../../components/divider/divider"
+import Divider from "../../../../components/divider/divider"
 import NavHeader from "../nav_header/nav_header"
 
 const Opening = () => {
