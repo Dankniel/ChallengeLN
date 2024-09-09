@@ -1,10 +1,13 @@
 import Divider from "../../components/divider/divider"
+import Anticipo from "./components/anticipo/anticipo"
 import NavHeader from "./components/nav_header/nav_header"
 import StickyBanner from "./components/sticky_banner/sticky_banner"
 import Subheader from "./components/subheader/subheader"
 import './home.scss'
+import HomeViewModel from "./home_view_model"
 
 const HomeScreen = () => {
+  const {volantaText} = HomeViewModel();
 
   return (
     <div>
@@ -14,31 +17,9 @@ const HomeScreen = () => {
         <Divider />
       </div>
       <Subheader />
-      <div>
-        Body
-      </div>
-      <div>
-        Footer
-      </div>
-      <div>
-        Footer
-      </div>
-      <div>
-        Footer
-      </div>
-      <div>
-        Footer
-      </div>
-      <div>
-        Footer
-      </div>
-      <div>
-        Footer
-      </div>
-      <div>
-        Footer
-      </div>
-      <div style={{ backgroundColor: 'red', height: '800px' }}>
+      <Anticipo text={volantaText} />
+
+      <div style={{ backgroundColor: 'red', height: '500px' }}>
         Footer
       </div>
     </div>
