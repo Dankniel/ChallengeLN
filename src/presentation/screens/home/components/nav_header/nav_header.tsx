@@ -1,4 +1,4 @@
-import logo from '../../../../../assets/images/logo-ln.svg'
+import logo from '../../../../../assets/images/logo_ln.svg'
 import searchIcon from '../../../../../assets/icons/search_icon.svg'
 import listIcon from '../../../../../assets/icons/list_icon.svg'
 
@@ -28,7 +28,7 @@ const NavHeader = () => {
         <img src={logo} alt={'alt_img'} className={"nav-logo"} />
       </div>
       <div className="nav-header-sm-search-container align-items-center w-120px justify-space-between">
-        <p className="font-w-700 font-s-12 lh-16 "> SUSCRIBITE </p>
+        <p className="font-w-700 font-s-12 lh-16 text-color-blue "> SUSCRIBITE </p>
         <img src={searchIcon} alt={'alt_img'} className={"search-icon"} />
       </div>
 

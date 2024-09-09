@@ -1,0 +1,38 @@
+@import '../../../../../styles/mixins';
+
+.subheader-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+
+@include respond-to(mobile) {
+  .subheader-container {
+    justify-content: center;
+  }
+
+  .subheader-benefits-container {
+    display: none;
+  }
+
+  .subheader-dolar-title {
+    display: none;
+  }
+}
+
+@include respond-to(desktop) {
+  .subheader-container {
+    background-color: #F2F2F2;
+  }
+
+  .subheader-newsletters-container,
+  .subheader-weather-container {
+    display: flex;
+  }
+}
+
+@include respond-to(fullscreen) {
+  .subheader-container {
+    padding: 16px 330px;
+  }
+}

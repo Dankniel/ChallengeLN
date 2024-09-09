@@ -2,6 +2,7 @@ import Divider from "../../components/divider/divider"
 import NavHeader from "./components/nav_header/nav_header"
 import StickyBanner from "./components/sticky_banner/sticky_banner"
 import Subheader from "./components/subheader/subheader"
+import './home.scss'
 
 const HomeScreen = () => {
 
@@ -9,7 +10,9 @@ const HomeScreen = () => {
     <div>
       <StickyBanner />
       <NavHeader />
-      <Divider />
+      <div className="diviver-container">
+        <Divider />
+      </div>
       <Subheader />
       <div>
         Body

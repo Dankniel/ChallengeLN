@@ -1,5 +1,14 @@
 @import './variables';
 
+@font-face {
+  font-family: 'SuecaSlab-Bold';
+  src: url('./fonts/suecaslab-bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'SuecaSlab-Medium';
+  src: url('./fonts/suecaslab-medium.woff2') format('woff2');
+}
 
 // Reset CSS o normalize.css
 * {
@@ -11,4 +20,12 @@
 body {
   font-family: 'Arial', sans-serif;
   color: $black-ln;
+}
+
+.sueca-bold {
+  font-family: 'SuecaSlab-Bold', sans-serif;
+}
+
+.sueca-medium {
+  font-family: 'SuecaSlab-Medium', sans-serif;
 }

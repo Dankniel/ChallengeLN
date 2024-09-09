@@ -157,8 +157,12 @@
   .w-#{$width} {
     width: #{$width};
   }
+
 }
 
+.w-full{
+  width: 100%;
+}
 //HEIGHT
 @each $height in $heightSizes {
   .h-#{$height} {

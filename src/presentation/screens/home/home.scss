@@ -1,0 +1,9 @@
+@import '../../../styles/mixins';
+
+
+
+@include respond-to(tablet) {
+  .diviver-container {
+    display: none;
+  }
+}
