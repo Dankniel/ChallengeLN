@@ -1,0 +1,20 @@
+@import '../../../styles/mixins';
+
+@include respond-to(mobile) {
+  .publicidad-container {
+    display: none;
+  }
+}
+
+
+@include respond-to(desktop) {
+  .publicidad-container {
+    height: 148px;
+  }
+
+  .publicidad-body-container {
+    width: 920px;
+    height: 100px;
+  }
+
+}

@@ -9,6 +9,7 @@ import './home.scss'
 import HomeViewModel from "./home_view_model"
 
 import catImg from '../../../assets/images/cat-photo.jpg'
+import Publicidad from "../../components/publicidad/publicidad"
 
 const HomeScreen = () => {
   const {volantaText} = HomeViewModel();
@@ -23,6 +24,7 @@ const HomeScreen = () => {
       <Subheader />
       <Anticipo text={volantaText} />
       <Placeholder />
+      <Publicidad />
       <Card variants="default" image={catImg} badgeText="NEW" title="Lead. Title esto es un titulo de la novedad con unas cuantas lineas que ocupar" author="Author / Marquee"  />
       <div style={{ backgroundColor: 'red', height: '500px' }}>
         Footer

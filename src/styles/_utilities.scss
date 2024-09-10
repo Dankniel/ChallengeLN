@@ -204,6 +204,12 @@
   }
 }
 
+@each $borderStyle in $borderStyles {
+  .border-style-#{$borderStyle} {
+    border-style: #{$borderStyle};
+  }
+}
+
 //BORDER RADIUS
 @each $borderRadius in $radiusSizes {
   .border-radius-#{$borderRadius} {
