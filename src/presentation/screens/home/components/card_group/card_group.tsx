@@ -1,11 +1,9 @@
-import { Article } from '../../home_view_model'
 import Card from '../card/card'
 import './card_group.scss'
+import { CardGroupProps } from './types'
 
 
-interface CardGroupProps {
-  articles: Article[]
-}
+
 const CardGroup = ({articles}: CardGroupProps) => {
   return (
     <div className="card-group-x3--container">

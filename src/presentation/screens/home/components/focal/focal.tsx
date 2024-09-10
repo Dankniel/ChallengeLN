@@ -1,12 +1,7 @@
 import './focal.scss'
 import catImg from '../../../../../assets/images/cat-photo.jpg'
 import Card from '../card/card'
-import { Article } from '../../home_view_model'
-
-
-interface FocalProps {
-  articles: Article[] | undefined
-}
+import { FocalProps } from './types'
 
 const Focal = ({articles}: FocalProps) => {
 

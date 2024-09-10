@@ -1,7 +1,5 @@
+import { AnticipoProps } from "./types"
 
-interface AnticipoProps {
-  text: string
-}
 
 const Anticipo = ({ text }: AnticipoProps) => {
   return (
