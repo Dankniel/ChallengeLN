@@ -16,5 +16,6 @@ Se maquetaron varios componentes siguendo las especificaciones de cada pantalla 
 - React Testing Library
 
 
-<img src="./_1.PNG"> 
-<img src="./_2.PNG"> 
+<img src="./capture/_1.png"> 
+<img src="./capture/_2.png"> 
+<img src="./capture/_3.png"> 
