@@ -2,6 +2,9 @@
 
 Se maquetaron varios componentes siguendo las especificaciones de cada pantalla definidas en el Figma, implementé SASS con metodología Utility First e implementé algunos test unitarios para el componente de Card, ya que es el que tiene más complejidad.
 
+# Web: 
+https://dankniel-challenge-ln.netlify.app
+
 ## Tecnologías
 
 - React

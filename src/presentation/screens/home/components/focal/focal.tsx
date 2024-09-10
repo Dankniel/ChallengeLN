@@ -27,7 +27,7 @@ const Focal = ({articles}: FocalProps) => {
           titleClassName='font-s-32 lh-40'
           author={articles?.[0].author || ''}
           subhead={articles?.[0].subtitle || ''}
-
+          url={articles?.[0].url || ''}
         />
       </div>
        {/* Aquí agregamos el divisor */}
