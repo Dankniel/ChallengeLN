@@ -7,3 +7,16 @@
     display: none;
   }
 }
+
+@include respond-to(mobile) {
+  .home-body-container {
+    margin: 0
+  }
+}
+
+@include respond-to(fullscreen) {
+  .home-body-container {
+    margin-left: 320px;
+    margin-right: 320px;
+  }
+}

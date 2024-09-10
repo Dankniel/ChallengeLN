@@ -1,0 +1,37 @@
+@import '../../../../../styles/mixins';
+
+
+.focal-grid-container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 2fr 1px 1fr; // 1px para el divisor, ajusta según el grosor que desees
+  grid-template-rows: repeat(2, auto); // Dos filas automáticas para que el contenido determine la altura
+  gap: 32px; // Espacio entre columnas
+}
+
+.focal-left-article {
+  grid-column: 1 / 2; // Ocupará la primera columna
+  grid-row: span 2; // Ocupará dos filas
+ //  grid-row: span 2; // Este artículo ahora ocupará dos filas
+}
+
+.divider {
+  grid-column: 2 / 3; // Colocarlo entre las dos columnas
+  grid-row: span 2;   // Que abarque dos filas completas
+  width: 1px;
+  background-color: #CCCCCC; // Color del divisor
+  height: 100%; // Que ocupe toda la altura disponible
+}
+
+@include respond-to(mobile) {
+  .focal-grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px
+  }
+
+  .focal-title-section {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
