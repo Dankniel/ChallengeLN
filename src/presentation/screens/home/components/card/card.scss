@@ -1,6 +1,8 @@
 @import '../../../../../styles/mixins';
 
-
+.author-image {
+  object-fit: cover;
+}
 
 .card-variant-default {
   height: 450px;
@@ -101,6 +103,65 @@
       height: 240px;
     }
 
+  }
+}
+
+.card-variant-2 {
+  border: 1px dashed black;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  height: fit-content;
+
+  .card-title-section {
+    gap: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    position: relative;
+    height: auto;
+  }
+
+  .card-title {
+    color: black;
+  }
+
+  .card-author {
+    color: #272727;
+  }
+}
+
+.card-variant-3 {
+  border: 1px dashed black;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  height: fit-content;
+
+  .card-title-section {
+    gap: 18px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    position: relative;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-title {
+    color: black;
+    text-align: center;
+  }
+
+  .card-author {
+    color: #272727;
+  }
+
+  .author-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
