@@ -12,6 +12,7 @@ import catImg from '../../../assets/images/cat-photo.jpg'
 import Publicidad from "../../components/publicidad/publicidad"
 import Focal from "./components/focal/focal"
 import CardGroup from "./components/card_group/card_group"
+import Footer from "./components/footer/footer"
 
 const HomeScreen = () => {
   const {volantaText} = HomeViewModel();
@@ -33,9 +34,7 @@ const HomeScreen = () => {
         <CardGroup />
       </div>
       
-      <div style={{ backgroundColor: 'red', height: '500px' }}>
-        Footer
-      </div>
+      <Footer />
     </div>
   )
 }
