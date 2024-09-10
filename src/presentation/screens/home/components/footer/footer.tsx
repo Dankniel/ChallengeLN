@@ -14,19 +14,19 @@ import Divider from '../../../../components/divider/divider'
 const Footer = () => {
   return (
     <div className="mt-24 pt-24 pb-24 d-flex justify-space-between fd-column align-items-center gap-50">
-       <img src={logo} alt={'alt_img'} className={"nav-logo h-24px"} />
+       <img src={logo} alt={'ln_logo'} className={"nav-logo h-24px"} />
        <Divider />
        <div className='footer-social-container d-flex w-fit-content justify-space-around gap-50'>
-        <img src={fbIcon} alt={'alt_img'} className={"nav-logo h-24px w-24px"} />
-        <img src={twitterIcon} alt={'alt_img'} className={"nav-logo h-24px w-24px"} />
-        <img src={igIcon} alt={'alt_img'} className={"nav-logo h-24px w-24px"} />
-        <img src={rssIcon} alt={'alt_img'} className={"nav-logo h-24px w-24px"} />
+        <img src={fbIcon} alt={'fb_icon'} className={"nav-logo h-24px w-24px"} />
+        <img src={twitterIcon} alt={'twitter_icon'} className={"nav-logo h-24px w-24px"} />
+        <img src={igIcon} alt={'instagram_icon'} className={"nav-logo h-24px w-24px"} />
+        <img src={rssIcon} alt={'rss_icon'} className={"nav-logo h-24px w-24px"} />
         
        </div>
 
        <div className='footer-stores-container d-flex w-fit-content justify-space-around gap-50'>
-        <img src={androidStore} alt={'alt_img'} className={"nav-logo h-35px w-120px"} />
-        <img src={iosStore} alt={'alt_img'} className={"nav-logo h-35px w-120px"} />
+        <img src={androidStore} alt={'android_store'} className={"nav-logo h-35px w-120px"} />
+        <img src={iosStore} alt={'ios_store'} className={"nav-logo h-35px w-120px"} />
         
         
        </div>

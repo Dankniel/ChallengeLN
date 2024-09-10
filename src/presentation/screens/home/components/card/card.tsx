@@ -1,8 +1,8 @@
-import Badge from '../../../../components/badge/badge'
-import './card.scss'
+import Badge from '../../../../components/badge/badge';
+import './card.scss';
 
 interface CardProps {
-  variants: string,
+  variants?: string,
   lead?: string,
   title?: string,
   titleClassName?: string,
@@ -10,10 +10,11 @@ interface CardProps {
   badgeText?: string,
   badgeClassName?: string,
   author?: string,
-  image?: string,
+  image?: string | null,
   imageClassName?: string,
-  avatar?: string,
-  titleFont?: string
+  avatar?: string | null,
+  titleFont?: string,
+  url?: string
 }
 
 const Card = ({
@@ -27,12 +28,14 @@ const Card = ({
   image,
   imageClassName,
   avatar,
-  titleFont = 'sueca-bold'
+  titleFont = 'sueca-bold',
+  url
 }: CardProps) => {
-
+  // Si la prop URL está presente, envolvemos el contenido de la tarjeta en un <a>
+  const Wrapper = url ? 'a' : 'div';
   return (
-    <div className={`card-variant-${variants}`}>
-      {image && <img src={image} alt={'alt_img'} className={`card-image ${imageClassName}`} />}
+    <Wrapper href={url} className={`card-variant-${variants}`} target={url ? '_blank' : '_self'} rel="noopener noreferrer">
+      {image && <img src={image} alt={title} className={`card-image ${imageClassName}`} />}
       <div className='card-title-section d-flex pos-absolute fd-column h-450px justify-flex-end'>
         {badgeText &&
           <div className='card-badge'>
@@ -46,8 +49,7 @@ const Card = ({
           <p className='card-author text-color-white font-s-14 lh-16 font-w-700'>{author}</p>
         </div>
       </div>
-
-    </div>
+    </Wrapper>
   )
 }
 

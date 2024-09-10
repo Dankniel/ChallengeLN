@@ -15,7 +15,7 @@ import CardGroup from "./components/card_group/card_group"
 import Footer from "./components/footer/footer"
 
 const HomeScreen = () => {
-  const {volantaText} = HomeViewModel();
+  const {volantaText, dummyArticles} = HomeViewModel();
 
   return (
     <div>
@@ -28,10 +28,18 @@ const HomeScreen = () => {
       <Anticipo text={volantaText} />
       <Placeholder />
       <Publicidad />
-      <Card variants="default" image={catImg} imageClassName={"w-full h-240px"} badgeText="NEW" lead="Lead." title="Title esto es un titulo de la novedad con unas cuantas lineas que ocupar" author="Author / Marquee"  />
+      <Card 
+        variants="default" 
+        image={catImg} 
+        imageClassName={"w-full h-240px"} 
+        badgeText="NEW" 
+        lead="Lead." 
+        title="Title esto es un titulo de la novedad con unas cuantas lineas que ocupar" 
+        author="Author / Marquee"  
+      />
       <div className="home-body-container ml-15 mr-15">
-        <Focal />
-        <CardGroup />
+        <Focal articles={dummyArticles.slice(0, 3)}/>
+        <CardGroup articles={dummyArticles.slice(3)} />
       </div>
       
       <Footer />

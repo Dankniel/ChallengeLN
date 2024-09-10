@@ -25,11 +25,11 @@ const NavHeader = () => {
       </div>
 
       <div>
-        <img src={logo} alt={'alt_img'} className={"nav-logo"} />
+        <img src={logo} alt={'ln_logo'} className={"nav-logo"} />
       </div>
       <div className="nav-header-sm-search-container align-items-center w-120px justify-space-between">
         <p className="font-w-700 font-s-12 lh-16 text-color-blue "> SUSCRIBITE </p>
-        <img src={searchIcon} alt={'alt_img'} className={"search-icon"} />
+        <img src={searchIcon} alt={'search_icon'} className={"search-icon"} />
       </div>
 
       <div className="nav-header-right-section justify-flex-end w-420px gap-24">

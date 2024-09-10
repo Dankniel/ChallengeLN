@@ -1,9 +1,12 @@
-import catImg from '../../../../../assets/images/cat-photo.jpg'
+import { Article } from '../../home_view_model'
 import Card from '../card/card'
 import './card_group.scss'
 
-const CardGroup = () => {
 
+interface CardGroupProps {
+  articles: Article[]
+}
+const CardGroup = ({articles}: CardGroupProps) => {
   return (
     <div className="card-group-x3--container">
       <div className="focal-title-section d-flex fd-column gap-8 mb-20 mt-50">
@@ -12,7 +15,31 @@ const CardGroup = () => {
       </div>
 
       <div className='card-group-grid-container'>
-        <Card
+        {articles.map((article, index) => (
+          <Card
+            key={index}
+            variants={(index + 1 ).toString()}
+            imageClassName={"w-full"}
+            image={article?.imageSrc || null}
+            lead={article.lead || ''}
+            title={article.title}
+            titleFont='sueca-bold'
+            titleClassName='font-s-18 lh-26'
+            author={article.author}
+            avatar={article.authorImg || null}
+            url={article.url}
+          />
+        ))}
+
+      </div>
+    </div>
+  )
+}
+
+export default CardGroup
+
+/**
+ *         <Card
           variants="3"
           imageClassName={"w-full h-156px"}
           title="Title esto es un titulo de la novedad con unas cuantas lineas que ocupar"
@@ -43,9 +70,6 @@ const CardGroup = () => {
           avatar={catImg}
 
         />
-      </div>
-    </div>
-  )
-}
-
-export default CardGroup
+ * 
+ * 
+ */

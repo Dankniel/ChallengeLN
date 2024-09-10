@@ -4,9 +4,16 @@
   object-fit: cover;
 }
 
+
+
 .card-variant-default {
   height: 450px;
+  text-decoration: none; // Esto quitará el subrayado del enlace
+  color: inherit; // Asegura que el color del texto no cambie al ser un enlace
 
+  &:hover {
+    text-decoration: none; // También aplica esto al hover
+  }
   .card-image {
     height: 450px;
     object-fit: cover;
@@ -25,9 +32,15 @@
   }
 
   @include respond-to(tablet) {
+    height: 474px;
+    .card-image {
+      height: 474px;
+    }
+  
     .card-title {
       font-size: 40px;
       line-height: 52px;
+      
     }
 
     .card-title-section {
@@ -38,6 +51,11 @@
   }
 
   @include respond-to(desktop) {
+    height: 517px;
+    .card-image {
+      height: 517px;
+    }
+
     .card-title {
       font-size: 48px;
       line-height: 56px;
@@ -58,6 +76,12 @@
 }
 
 .card-variant-1 {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    text-decoration: none; 
+  }
   .card-image {
     object-fit: cover;
   }
@@ -113,6 +137,12 @@
   padding-left: 16px;
   padding-right: 16px;
   height: fit-content;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    text-decoration: none; 
+  }
 
   .card-title-section {
     gap: 8px;
@@ -138,6 +168,12 @@
   padding-left: 16px;
   padding-right: 16px;
   height: fit-content;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    text-decoration: none; 
+  }
 
   .card-title-section {
     gap: 18px;

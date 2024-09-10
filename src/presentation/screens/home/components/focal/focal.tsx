@@ -1,9 +1,14 @@
 import './focal.scss'
 import catImg from '../../../../../assets/images/cat-photo.jpg'
 import Card from '../card/card'
+import { Article } from '../../home_view_model'
 
 
-const Focal = () => {
+interface FocalProps {
+  articles: Article[] | undefined
+}
+
+const Focal = ({articles}: FocalProps) => {
 
   return (
     <div className="focal-container" >
@@ -15,44 +20,34 @@ const Focal = () => {
       <div className="focal-left-article  d-flex">
         <Card
           variants="1"
-          image={catImg}
+          image={articles?.[0].imageSrc || catImg}
           imageClassName={"w-full h-312px"}
-          badgeText="NEW"
-          lead="Lead."
-          title="Title esto es un titulo de la novedad con unas cuantas lineas que ocupar"
+          lead={articles?.[0].lead || ''}
+          title={articles?.[0].title || ''}
           titleClassName='font-s-32 lh-40'
-          author="Author / Marquee"
-          subhead="Subhead. Lana soñaba con volar a la luna. Todas las tardes se tumbaba en su cama y se imaginaba cómo sería su viaje a bordo de su propia nave espacial."
+          author={articles?.[0].author || ''}
+          subhead={articles?.[0].subtitle || ''}
 
         />
       </div>
        {/* Aquí agregamos el divisor */}
        <div className="divider"></div>
-      <Card
-        variants="1"
-        image={catImg}
-        imageClassName={"w-full h-156px"}
-        badgeText="NEW"
-        lead="Lead."
-        title="Title esto es un titulo de la novedad con unas cuantas lineas que ocupar"
-        titleFont='sueca-medium'
-        titleClassName='font-s-18 lh-26'
-        author="Author / Marquee"
-
-      />
-      <Card
-        variants="1"
-        image={catImg}
-        imageClassName={"w-full h-156px"}
-
-        badgeText="NEW"
-        lead="Lead."
-        title="Title esto es un titulo de la novedad con unas cuantas lineas que ocupar"
-        titleFont='sueca-medium'
-        titleClassName='font-s-18 lh-26'
-        author="Author / Marquee"
-
-      />
+       {articles?.slice(1, 3)?.map((article, index) => {
+           return (
+             <Card
+               key={index}
+               variants="1"
+               image={article.imageSrc || catImg}
+               imageClassName={"w-full h-156px"}
+               lead={article.lead || ''}
+               title={article.title || ''}
+               titleClassName='font-s-18 lh-26'
+               author={article.author || ''}
+               subhead={article.subtitle || ''}
+               url={article.url || ''}
+             />
+           )
+       })}
       </div>
     </div>
   )

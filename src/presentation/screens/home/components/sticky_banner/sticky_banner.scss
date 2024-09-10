@@ -5,6 +5,7 @@
 
   @include respond-to(mobile) {
     display: flex;
+    z-index: 100;
   }
 }
 

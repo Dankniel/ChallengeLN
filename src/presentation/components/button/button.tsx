@@ -19,7 +19,7 @@ const Button = ({
     >
       {icon &&
         <div>
-          <img src={icon} alt={'alt_img'} className={"button-icon"} />
+          <img src={icon} alt={text} className={"button-icon"} />
         </div>
       }
       <span className={textClassName}>{text}</span>
